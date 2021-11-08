@@ -3,6 +3,7 @@ package app
 import (
 	"log"
 	"net/http"
+	"os"
 	"text/template"
 
 	"github.com/gorilla/mux"
@@ -10,14 +11,14 @@ import (
 
 // API server
 type APIserver struct {
-	config *Config
+	//config *Config
 	router *mux.Router
 }
 
 // Create new server
-func New(config *Config) *APIserver {
+func New() *APIserver {
 	return &APIserver{
-		config: config,
+		//config: config,
 		router: mux.NewRouter(),
 	}
 }
@@ -26,7 +27,7 @@ func New(config *Config) *APIserver {
 func (s *APIserver) Start() error {
 	s.configureRouter()
 	log.Println("starting API server")
-	return http.ListenAndServe(s.config.Port, s.router)
+	return http.ListenAndServe(":"+os.Getenv("PORT"), s.router)
 }
 
 func (s *APIserver) configureRouter() {
