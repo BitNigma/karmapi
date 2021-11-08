@@ -36,17 +36,15 @@ func (s *APIserver) configureRouter() {
 	})
 	router.HandleFunc("/404", s.misshandle())
 	router.HandleFunc("/", s.mainhandle())
+	router.PathPrefix("/").Handler(http.FileServer(http.Dir("static")))
 
 }
 
 func (s *APIserver) mainhandle() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 
-		basetpls := []string{"static/header.html", "static/footer.html", "static/head.html"}
-		mass := []string{"static/index.html", basetpls[0], basetpls[1], basetpls[2]}
-
 		//create html template
-		tmpl, err := template.ParseFiles(mass...)
+		tmpl, err := template.ParseFiles("static/index.html")
 		if err != nil {
 			http.Error(w, err.Error(), 400)
 			return
