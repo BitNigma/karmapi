@@ -1,3 +1,3 @@
 #sever port
 port : :9000
-host : https://jonnyland.herokuapp.com/
+host : http://betfate.herokuapp.com/

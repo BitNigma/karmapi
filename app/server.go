@@ -25,7 +25,7 @@ func New(config *Config) *APIserver {
 // Start new server
 func (s *APIserver) Start() error {
 	s.configureRouter()
-	log.Println("strating API server")
+	log.Println("starting API server")
 	return http.ListenAndServe(s.config.Port, s.router)
 }
 
