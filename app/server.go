@@ -3,7 +3,6 @@ package app
 import (
 	"log"
 	"net/http"
-	"os"
 	"text/template"
 
 	"github.com/gorilla/mux"
@@ -27,7 +26,7 @@ func New() *APIserver {
 func (s *APIserver) Start() error {
 	s.configureRouter()
 	log.Println("starting API server")
-	return http.ListenAndServe(":"+os.Getenv("PORT"), s.router)
+	return http.ListenAndServe(":9000" /* +os.Getenv("PORT") */, s.router)
 }
 
 func (s *APIserver) configureRouter() {
@@ -40,12 +39,14 @@ func (s *APIserver) configureRouter() {
 	router.PathPrefix("/").Handler(http.FileServer(http.Dir("static")))
 
 }
-
 func (s *APIserver) mainhandle() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 
+		basetpls := []string{"static/header.html", "static/footer.html", "static/head.html"}
+		mass := []string{"static/index.html", basetpls[0], basetpls[1], basetpls[2]}
+
 		//create html template
-		tmpl, err := template.ParseFiles("static/index.html")
+		tmpl, err := template.ParseFiles(mass...)
 		if err != nil {
 			http.Error(w, err.Error(), 400)
 			return
