@@ -3,6 +3,7 @@ package app
 import (
 	"log"
 	"net/http"
+	"os"
 	"text/template"
 
 	"github.com/gorilla/mux"
@@ -26,7 +27,7 @@ func New() *APIserver {
 func (s *APIserver) Start() error {
 	s.configureRouter()
 	log.Println("starting API server")
-	return http.ListenAndServe(":9000" /* +os.Getenv("PORT") */, s.router)
+	return http.ListenAndServe(":"+os.Getenv("PORT"), s.router)
 }
 
 func (s *APIserver) configureRouter() {
