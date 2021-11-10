@@ -1515,7 +1515,10 @@ pre code {
     border: 0;
 }
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #f8fafd;
+    background-color: #2A3142;
+}
+.bg-new {
+    background-color: #2A3142 !important;
 }
 .table-hover tbody tr:hover {
     color: #677788;
@@ -1524,13 +1527,13 @@ pre code {
 .table-primary,
 .table-primary > td,
 .table-primary > th {
-    background-color: #c7dbff;
+    background-color: #2A3142;
 }
 .table-primary tbody + tbody,
 .table-primary td,
 .table-primary th,
 .table-primary thead th {
-    border-color: #97bbff;
+    border-color: #2A3142;
 }
 .table-hover .table-primary:hover {
     background-color: #aecbff;
@@ -1702,7 +1705,7 @@ pre code {
 }
 .table .thead-light th {
     color: #677788;
-    background-color: #f8fafd;
+    background-color: #2A3142;
     border-color: #e7eaf3;
 }
 .table-dark {
@@ -5928,19 +5931,19 @@ button.bg-indigo:hover {
     background-color: transparent !important;
 }
 .border {
-    border: 0.0625rem solid #e7eaf3 !important;
+    border: 0.0625rem solid #1e1e1e !important;
 }
 .border-top {
-    border-top: 0.0625rem solid #e7eaf3 !important;
+    border-top: 0.0625rem solid #1e1e1e !important;
 }
 .border-right {
-    border-right: 0.0625rem solid #e7eaf3 !important;
+    border-right: 0.0625rem solid #1e1e1e !important;
 }
 .border-bottom {
-    border-bottom: 0.0625rem solid #e7eaf3 !important;
+    border-bottom: 0.0625rem solid #1e1e1e !important;
 }
 .border-left {
-    border-left: 0.0625rem solid #e7eaf3 !important;
+    border-left: 0.0625rem solid #1e1e1e !important;
 }
 .border-0 {
     border: 0 !important;
@@ -15412,7 +15415,7 @@ label.btn {
     background-color: #f8fafd;
 }
 .card-bg-light:hover {
-    background-color: #f4f7fc;
+    background-color: #dfdfdf;
 }
 .card-frame {
     border: 0.0625rem solid rgba(231, 234, 243, 0.7);
@@ -19398,7 +19401,6 @@ a:hover .text-hover-primary {
 }
 .transition-3d-hover:focus,
 .transition-3d-hover:hover {
-    transform: translateY(-3px);
 }
 .transition-zoom-hover {
     transform: scale(1);
