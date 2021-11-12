@@ -4204,10 +4204,16 @@ input[type="submit"].btn-block {
     padding: 1.5rem 1.5rem;
     margin-bottom: 0;
     background-color: #fff;
-    border-bottom: 0.0625rem solid rgba(231, 234, 243, 0.7);
 }
 .card-header:first-child {
-    border-radius: 0.75rem 0.75rem 0 0;
+    border-radius: 0.75rem 0.75rem 0.75rem 0.75rem;
+    background: #2e3446;
+    
+}
+.bet-p {
+
+    display: inline-block;
+    margin-left: 20px;
 }
 .card-footer {
     padding: 1.5rem 1.5rem;
@@ -15412,10 +15418,10 @@ label.btn {
     }
 }
 .card-bg-light {
-    background-color: #f8fafd;
+    background-color: #2e3446;
 }
 .card-bg-light:hover {
-    background-color: #dfdfdf;
+    background-color: #333a4e;
 }
 .card-frame {
     border: 0.0625rem solid rgba(231, 234, 243, 0.7);
@@ -15446,11 +15452,12 @@ label.btn {
     color: #1e2022;
     text-align: left;
     white-space: inherit;
-    border-radius: 0.75rem;
+   
 }
 .card-btn-toggle {
     display: inline-block;
     color: #377dff;
+    margin-right: 20px;
 }
 .card-btn-toggle-default {
     display: none;
