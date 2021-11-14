@@ -19335,6 +19335,9 @@ label.btn {
     font-weight: 600;
     letter-spacing: 0.03125rem;
 }
+.bet {
+    font-size: 1.075rem;
+}
 .text-lh-sm {
     line-height: 1.2;
 }
@@ -19342,7 +19345,7 @@ label.btn {
     line-height: 1.8;
 }
 .font-size-1 {
-    font-size: 0.875rem;
+    font-size: 1.075rem;
 }
 .font-size-2 {
     font-size: 1.5rem;
