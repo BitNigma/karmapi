@@ -1105,6 +1105,10 @@ pre code {
   }
 }
 
+span.font-size-my {
+  font-size: 15px;
+}
+
 @media (min-width: 768px) {
   .col-md {
     -ms-flex-preferred-size: 0;

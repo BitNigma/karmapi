@@ -1,19 +1,19 @@
 {{define "header"}}
-<header id="headerWithBSDropdown" class="header header-sticky-top">
+<!-- ========== HEADER ========== -->
+<header id="header" class="header header-sticky-top"
+        data-hs-header-options='{
+          "fixMoment": 1000,
+          "fixEffect": "slide"
+        }'>
   <div class="header-section bg-dark">
-    <div id="logoAndNavWithBSDropdown" class="container">
+    <div id="logoAndNav" class="container">
       <!-- Nav -->
       <nav class="js-mega-menu navbar navbar-expand-lg">
         <!-- Logo -->
-        <a class="navbar-brand graph" href="/" aria-label="Front">
+        <a class="navbar-brand" href="/" aria-label="Front">
           <svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
   <style>
-   
     .heavy { font: bold 50px sans-serif;fill:white;}
-
-    /* Обратите внимание, что цвет текста задаётся с помощью        *
-     * fill свойства, а свойство color используется только для HTML */
-    .Rrrrr { font: italic 40px serif; fill: red; }
   </style>
 
 
@@ -27,9 +27,9 @@
         <button type="button" class="navbar-toggler btn btn-icon btn-sm rounded-circle"
                 aria-label="Toggle navigation"
                 aria-expanded="false"
-                aria-controls="navBarWithBSDropdown"
+                aria-controls="navBar"
                 data-toggle="collapse"
-                data-target="#navBarWithBSDropdown">
+                data-target="#navBar">
           <span class="navbar-toggler-default">
             <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
               <path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
@@ -44,39 +44,26 @@
         <!-- End Responsive Toggle Button -->
 
         <!-- Navigation -->
-        <div id="navBarWithBSDropdown" class="collapse navbar-collapse">
-          <ul class="navbar-nav">
+        <div id="navBar" class="collapse navbar-collapse">
+          <ul class="js-scroll-nav navbar-nav">
             <li class="navbar-nav-item">
-              <a class="nav-link" href="/about">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
-
             <li class="navbar-nav-item">
-              <a class="nav-link" href="/market">Market</a>
+              <a class="nav-link" href="#vision">Vision</a>
             </li>
-
-
             <li class="navbar-nav-item">
-              <a class="nav-link" href="/directions">Directions</a>
+              <a class="nav-link" href="#directions">Directions</a>
             </li>
-
             <li class="navbar-nav-item">
-              <a class="nav-link " href="/how it works">How it works</a>
+              <a class="nav-link" href="#compettitors">Compettitors</a>
             </li>
-
             <li class="navbar-nav-item">
-              <a class="nav-link " href="/trading">Trading</a>
+              <a class="nav-link" href="#roadmap">Roadmap</a>
             </li>
-
-            <li class="navbar-nav-item">
-              <a class="nav-link " href="/features">Features</a>
+             <li class="navbar-nav-item">
+              <a class="nav-link" href="#features">Features</a>
             </li>
-
-
-            <li class="navbar-nav-item">
-              <a class="nav-link " href="/players">Players</a>
-            </li>
-
-            
           </ul>
         </div>
         <!-- End Navigation -->
@@ -85,5 +72,6 @@
     </div>
   </div>
 </header>
+<!-- ========== END HEADER ========== -->
 
 {{end}}

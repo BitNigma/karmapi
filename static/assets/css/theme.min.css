@@ -19344,6 +19344,9 @@ label.btn {
 .text-lh-lg {
     line-height: 1.8;
 }
+.font-size-my {
+    font-size: 15px;
+}
 .font-size-1 {
     font-size: 1.075rem;
 }
