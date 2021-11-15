@@ -11,14 +11,14 @@ import (
 
 // API server
 type APIserver struct {
-	//config *Config
+	config *Config
 	router *mux.Router
 }
 
 // Create new server
 func New() *APIserver {
 	return &APIserver{
-		//config: config,
+		config: NewConfig(),
 		router: mux.NewRouter(),
 	}
 }
@@ -41,8 +41,11 @@ func (s *APIserver) configureRouter() {
 	router.PathPrefix("/").Handler(http.FileServer(http.Dir("static")))
 
 }
+
 func (s *APIserver) mainhandle() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
+
+		data := s.config
 
 		basetpls := []string{"static/header.html", "static/footer.html", "static/head.html"}
 		mass := []string{"static/index.html", basetpls[0], basetpls[1], basetpls[2]}
@@ -54,7 +57,7 @@ func (s *APIserver) mainhandle() http.HandlerFunc {
 			return
 		}
 
-		err = tmpl.Execute(w, nil)
+		err = tmpl.Execute(w, &data)
 		if err != nil {
 			http.Error(w, err.Error(), 400)
 			return
@@ -76,5 +79,4 @@ func (s *APIserver) misshandle() http.HandlerFunc {
 			log.Fatal(err)
 		}
 	}
-
 }
