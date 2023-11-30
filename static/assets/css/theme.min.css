@@ -17105,7 +17105,7 @@ label.btn {
 .go-to:focus:hover,
 .go-to:hover {
     color: #fff;
-    background-color: #30bb97;
+    background-color: #FBC65F;
     opacity: 1;
 }
 .hero-v1 {
@@ -20931,9 +20931,6 @@ background-color: #030303;
 }
 .no-padding {
     padding: 0px;
-}
-.bg-cloud {
-    background: left 0% top 0% no-repeat url("../img/bg-shapes/bg4.png") !important;
 }
 .karma-left {
     background-image:url("../img/bg-shapes/icon-left.png");

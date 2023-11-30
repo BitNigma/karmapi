@@ -48,9 +48,10 @@ func (s *APIserver) mainhandle() http.HandlerFunc {
 		data := s.config
 
 		basetpls := []string{"static/header.html", "static/footer.html", "static/head.html", "static/video.html", "static/second.html",
-			"static/third.html", "static/karma.html", "static/arcana.html", "static/market.html", "static/img.html", "static/roadmap.html", "static/partners.html", "static/community.html"}
+			"static/third.html", "static/karma.html", "static/arcana.html", "static/market.html", "static/img.html", "static/roadmap.html",
+			"static/partners.html", "static/community.html", "static/bord.html"}
 		mass := []string{"static/index.html", basetpls[0], basetpls[1], basetpls[2], basetpls[3], basetpls[4],
-			basetpls[5], basetpls[6], basetpls[7], basetpls[8], basetpls[9], basetpls[10], basetpls[11], basetpls[12]}
+			basetpls[5], basetpls[6], basetpls[7], basetpls[8], basetpls[9], basetpls[10], basetpls[11], basetpls[12], basetpls[13]}
 
 		//create html template
 		tmpl, err := template.ParseFiles(mass...)

@@ -6,12 +6,17 @@
     padding-right: 5%;
 }
 
+.bord-b {
+    border: 1px solid  #E1C05E !important;
+}
+
 #karmapi-p {
     font-family: Spectral !important;
     color: #A6A695;
     font-size: 14pt;
 
 }
+
 .karma-card {
     box-shadow: none;
     background: linear-gradient(180deg, #2e260e,#110e05);
@@ -44,13 +49,6 @@
 .bg-img-hero {
     background-image: url("../img/nft/nft.png");
     background-size:contain;
-}
-
-.hero-nft {
-    background-image: url("../img/star/moon.png");
-    background-repeat: no-repeat;
-    background-position:top right;
-    background-size: 80px;
 }
 
 .karma-star {
@@ -146,13 +144,72 @@ a.opensea-small p {
 
 .star {
     color:#CFCFB0;
-    list-style-type: square;
+    list-style-image: url("../img/star/ministar.png") !important;
     line-height: 30px;
     padding-top: 20px;
+    padding-left: 15px;
     font-family: Canela Trial !important;
     font-size: 18px;
+    border-top: 1px solid #FBC65F;
+} 
+.star li{
+    padding-left: 10px;
 }
 .karma-yl {
     color: #E1C05E;
+    font-size: 26px;
+    font-family: Canela Trial !important;
+}
+.bg-karma {
+    background: 0px 50px no-repeat url("../img/bg-shapes/bg4.png") !important;
+}
+.h-button {
+    display: inline-block;
+    background: linear-gradient(180deg, rgba(255, 211, 77, 0.3), rgb(17, 17, 1));
+    box-shadow: 0px 1px 3px 0px rgb(255, 211, 77, 0.3);
+    border-radius: 20px;
+    border: 1px solid #FBC65F;
+    text-align: center;
+    color: rgba(255, 211, 77, 0.6);
+    height: 30px;
+    font-weight: 100;
+    width: 100px;
     font-size: 16px;
+    vertical-align: bottom;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 20px;
+}
+.bord-h {
+    font-family:Spectral !important;
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 60px;
+
+}
+.karma-button-left {
+    position:absolute;
+    left: 43%;
+    top: 80%;
+    margin-right: 30px;
+    background-image: url("../img/bg-shapes/icon-left.png");
+    background-repeat: no-repeat;
+  
+}
+.karma-button-left:hover {
+    box-shadow: 1px 1px 1px 2px rgba(224, 128, 0, 0.3);
+}
+
+.karma-button-right {
+    position:absolute;
+    right: 43%;
+    top: 80%;
+    margin-right: 30px;
+    background-image: url("../img/bg-shapes/icon-right.png");
+    background-repeat: no-repeat;
+
+}
+.karma-button-right:hover {
+    box-shadow: 1px 1px 1px 2px rgba(224, 128, 0, 0.3);
 }
