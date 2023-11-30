@@ -7,9 +7,9 @@ type Config struct {
 }
 
 const (
-	title = "Betfate - The revolution Betting & Trading Exchange, Artificial intelligence and Big Data tools , new game changer in sports betting"
-	desc  = "BETFATE creates betting & trading platform with elements such as sports betting, trading, social networking, analytics, Big Data and etc"
-	key   = "Betfate, Betting, Exchange, Trading, AI, BigData, E-Sports"
+	title = "TaroPI - Prection Ecosystem"
+	desc  = "TaroPI make your Dream reality, Prediction Taro cards, NFT , Crypto Token"
+	key   = "TaroPI, Taro, Crypto, Token, Precition, Fate"
 )
 
 // Newconfig

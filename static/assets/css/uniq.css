@@ -1,0 +1,158 @@
+#karmapi {
+    font-family: Spectral !important;
+    color: #A6A695;
+    font-size: 14pt;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#karmapi-p {
+    font-family: Spectral !important;
+    color: #A6A695;
+    font-size: 14pt;
+
+}
+.karma-card {
+    box-shadow: none;
+    background: linear-gradient(180deg, #2e260e,#110e05);
+    border-radius: 10px;
+}
+.karma-h{
+    font-family: Canela Trial !important;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #FBC65F;
+
+}
+.karma-h-b{
+    font-family: Canela Trial !important;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #FBC65F;
+}
+
+.karma-h img {
+    width: 30px;
+}
+.karma-y {
+    font-family: Spectral !important;
+    color: #FBC65F;
+}
+
+.bg-img-hero {
+    background-image: url("../img/nft/nft.png");
+    background-size:contain;
+}
+
+.hero-nft {
+    background-image: url("../img/star/moon.png");
+    background-repeat: no-repeat;
+    background-position:top right;
+    background-size: 80px;
+}
+
+.karma-star {
+    background-image: url("../img/star/star2.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 40px;
+}
+.karma-crystal {
+    background-image: url("../img/star/crystal.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: 40px;
+}
+
+.karma-star-2 {
+    background-image: url("../img/star/star2.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: 0px 50px;
+    background-size: 40px;
+}
+
+a.opensea {
+    display: inline-block;
+    background: linear-gradient(45deg, rgba(255, 211, 77, 0.6), black);
+    border-radius: 80px;
+    border: 1px solid #FBC65F;
+    text-align: center;
+    color: rgba(255, 211, 77, 0.6);
+    height: 80px;
+    width: 400px;
+    vertical-align: bottom;
+}
+    
+a.opensea:hover {
+    box-shadow: inset 1px 0px 3px 1px #FBC65F;
+}
+
+a.opensea p {
+    vertical-align: middle;
+    font-family: Spectral !important;
+    color: #fff;
+    height: auto;
+    width: auto;
+    font-size: 24px;
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+
+a.opensea-small {
+    display: inline-block;
+    background: linear-gradient(45deg, rgba(255, 211, 77, 0.6), black);
+    border-radius: 20px;
+    border: 1px solid #FBC65F;
+    text-align: center;
+    color: rgba(255, 211, 77, 0.6);
+    height: 40px;
+    width: 130px;
+    vertical-align: bottom;
+}
+    
+a.opensea-small:hover {
+    box-shadow: inset 1px 0px 3px 1px #FBC65F;
+}
+
+a.opensea-small p {
+    vertical-align: middle;
+    font-family: Spectral !important;
+    color: #fff;
+    height: auto;
+    width: auto;
+    font-size: 12px;
+    padding-top: 10px;
+    font-weight: 700;
+}
+
+
+.karma-b {
+    border: 1px solid rgba(251, 198, 95, 0.5);
+    border-radius: 10px;
+    background: linear-gradient(135deg,rgba(0, 0, 0, 0.6) 60%,rgb(255, 231, 75, 0.2));
+}
+.karma-slider {
+    width: 260px;
+}
+.karma-slider img {
+    width: 130%;
+}
+
+.star {
+    color:#CFCFB0;
+    list-style-type: square;
+    line-height: 30px;
+    padding-top: 20px;
+    font-family: Canela Trial !important;
+    font-size: 18px;
+}
+.karma-yl {
+    color: #E1C05E;
+    font-size: 16px;
+}
