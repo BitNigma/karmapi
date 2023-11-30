@@ -71,7 +71,6 @@ func (s *APIserver) mainhandle() http.HandlerFunc {
 func (s *APIserver) misshandle() http.HandlerFunc {
 
 	return func(w http.ResponseWriter, r *http.Request) {
-
 		tpl, err := template.ParseFiles("static/404.html")
 		if err != nil {
 			http.Error(w, err.Error(), 400)

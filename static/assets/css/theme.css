@@ -61,7 +61,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #030303;
+  color: #677788;
   text-align: left;
   background-color: #fff;
 }
@@ -6834,7 +6834,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #030303 !important;
+  background-color: #377dff !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6904,7 +6904,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #030303 !important;
+  background-color: #19242e !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -24163,5 +24163,3 @@ a:hover .text-hover-primary {
 /*------------------------------------
   File for your custom SCSS style
 ------------------------------------*/
-
-
