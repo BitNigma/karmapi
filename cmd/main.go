@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"betfate.com/app"
+	"karmapi/app"
 )
 
 func main() {
