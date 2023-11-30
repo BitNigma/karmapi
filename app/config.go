@@ -7,9 +7,9 @@ type Config struct {
 }
 
 const (
-	title = "TaroPI - Prection Ecosystem"
-	desc  = "TaroPI make your Dream reality, Prediction Taro cards, NFT , Crypto Token"
-	key   = "TaroPI, Taro, Crypto, Token, Precition, Fate"
+	title = "KARMAPI, Shape Your Future with AI and Prediction"
+	desc  = "KARMAPI - Ecosystem, Decentralised Prediction, Fortune telling"
+	key   = "KARMAVERSE, SOCIALFI, GAMEFI, Decentralised Prediction, Fortune telling , FATE AND FUTURE"
 )
 
 // Newconfig
