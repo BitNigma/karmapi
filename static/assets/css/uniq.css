@@ -213,3 +213,6 @@ a.opensea-small p {
 .karma-button-right:hover {
     box-shadow: 1px 1px 1px 2px rgba(224, 128, 0, 0.3);
 }
+.karma-circle {
+    background-color: #030303 !important;
+}
