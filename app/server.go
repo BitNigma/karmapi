@@ -136,5 +136,5 @@ func (s *APIserver) misshandle() http.HandlerFunc {
 }
 
 func (s *APIserver) RedirectTLS(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "https://"+"localhost"+":443", http.StatusMovedPermanently)
+	http.Redirect(w, r, "https://"+"karmapi.ai"+":443", http.StatusMovedPermanently)
 }
