@@ -1,8 +1,12 @@
 package app
 
 import (
+	"crypto/tls"
+	"crypto/x509"
+	"io"
 	"log"
 	"net/http"
+	"os"
 	"text/template"
 
 	"github.com/gorilla/mux"
@@ -38,9 +42,44 @@ func (s *APIserver) Start() error {
 		}
 	}()
 
-	if err = http.ListenAndServe(":443", s.router); err != nil {
-		log.Println("can't redicrect user, something happening", err)
+	cert, err := tls.LoadX509KeyPair(CACertFilePath, KEY)
+	if err != nil {
+		log.Fatalf("server: loadkeys: %s", err)
 	}
+	certpool := x509.NewCertPool()
+
+	f, err := os.Open("certs/ca.pem")
+	if err != nil {
+		log.Println("can't read file")
+	}
+
+	pem, err := io.ReadAll(f)
+	if err != nil {
+		log.Fatalf("Failed to read client certificate authority: %v", err)
+	}
+	if !certpool.AppendCertsFromPEM(pem) {
+		log.Fatalf("Can't parse client certificate authority")
+	}
+
+	config := &tls.Config{
+		MinVersion: tls.VersionTLS12,
+		Certificates: []tls.Certificate{
+			cert,
+		},
+	}
+
+	server := &http.Server{
+		Handler:   s.router,
+		TLSConfig: config,
+		Addr:      ":443",
+	}
+
+	if err = server.ListenAndServeTLS(CACertFilePath, KEY); err != nil {
+		log.Println("can't redirect user", err)
+	}
+	/* if err = http.ListenAndServeTLS(":443", CACertFilePath, KEY, s.router); err != nil {
+		log.Println("can't redicrect user, something happening", err)
+	} */
 	log.Println("starting server")
 
 	return nil
