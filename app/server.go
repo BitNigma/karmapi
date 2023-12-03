@@ -77,9 +77,7 @@ func (s *APIserver) Start() error {
 	if err = server.ListenAndServeTLS(CACertFilePath, KEY); err != nil {
 		log.Println("can't redirect user", err)
 	}
-	/* if err = http.ListenAndServeTLS(":443", CACertFilePath, KEY, s.router); err != nil {
-		log.Println("can't redicrect user, something happening", err)
-	} */
+
 	log.Println("starting server")
 
 	return nil
