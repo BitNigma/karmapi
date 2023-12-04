@@ -37,7 +37,7 @@ func New() *APIserver {
 func (s *APIserver) Start() error {
 	s.configureRouter()
 	go func() {
-		if err = http.ListenAndServe(":8080", http.HandlerFunc(s.RedirectTLS)); err != nil {
+		if err = http.ListenAndServe(":80", http.HandlerFunc(s.RedirectTLS)); err != nil {
 			log.Println("can't redirect user", err)
 		}
 	}()
@@ -71,7 +71,7 @@ func (s *APIserver) Start() error {
 	server := &http.Server{
 		Handler:   s.router,
 		TLSConfig: config,
-		Addr:      ":8443",
+		Addr:      ":443",
 	}
 
 	if err = server.ListenAndServeTLS(CACertFilePath, KEY); err != nil {
