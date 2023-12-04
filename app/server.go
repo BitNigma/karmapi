@@ -1,22 +1,15 @@
 package app
 
 import (
-	"crypto/tls"
-	"crypto/x509"
-	"io"
 	"log"
 	"net/http"
-	"os"
 	"text/template"
 
 	"github.com/gorilla/mux"
 )
 
 var (
-	CACertFilePath = "certs/4a717aefc643cbe0.crt"
-	KEY            = "certs/pvt-key.key"
-	Ca             = "certs/ca.key"
-	err            error
+	err error
 )
 
 // API server
@@ -37,48 +30,11 @@ func New() *APIserver {
 func (s *APIserver) Start() error {
 	s.configureRouter()
 	go func() {
-		if err = http.ListenAndServe(":80", http.HandlerFunc(s.RedirectTLS)); err != nil {
+		if err = http.ListenAndServe(":8080", s.router); err != nil {
 			log.Println("can't redirect user", err)
 		}
+		log.Println("starting server")
 	}()
-
-	cert, err := tls.LoadX509KeyPair(CACertFilePath, KEY)
-	if err != nil {
-		log.Fatalf("server: loadkeys: %s", err)
-	}
-	certpool := x509.NewCertPool()
-
-	f, err := os.Open("certs/ca.pem")
-	if err != nil {
-		log.Println("can't read file")
-	}
-
-	pem, err := io.ReadAll(f)
-	if err != nil {
-		log.Fatalf("Failed to read client certificate authority: %v", err)
-	}
-	if !certpool.AppendCertsFromPEM(pem) {
-		log.Fatalf("Can't parse client certificate authority")
-	}
-
-	config := &tls.Config{
-		MinVersion: tls.VersionTLS12,
-		Certificates: []tls.Certificate{
-			cert,
-		},
-	}
-
-	server := &http.Server{
-		Handler:   s.router,
-		TLSConfig: config,
-		Addr:      ":443",
-	}
-
-	if err = server.ListenAndServeTLS(CACertFilePath, KEY); err != nil {
-		log.Println("can't redirect user", err)
-	}
-
-	log.Println("starting server")
 
 	return nil
 }
@@ -133,8 +89,4 @@ func (s *APIserver) misshandle() http.HandlerFunc {
 			log.Fatal(err)
 		}
 	}
-}
-
-func (s *APIserver) RedirectTLS(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "https://"+"karmapi.ai"+":443", http.StatusMovedPermanently)
 }
