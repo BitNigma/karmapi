@@ -37,6 +37,107 @@
     letter-spacing: 2px;
     color: #FBC65F;
 }
+@media only screen and (max-width: 375px) {
+    .karma-h-b {
+      margin-top: 20px;
+      font-size: 26px !important;
+      font-weight: 700 !important;
+      text-transform: uppercase;
+    }
+    #karmapi {
+        padding: 0px !important;
+    }
+    .slick-arrow-left {
+        position: absolute !important;
+        left: 32% !important;
+        top: 100% !important;
+    }
+    .slick-arrow-right {
+        position: absolute !important;
+        right: 32% !important;
+        top: 100% !important;
+    }
+    .karma-star {
+        background-image: none !important;
+    }
+    .card-img-top {
+        margin-bottom: 20px;
+    }
+    .karma-mob {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .karma-mh {
+        text-align: center;
+    }
+    .karma-mp {
+        text-align: center;
+    }
+    .al-c {
+        text-align: center;
+    }
+    .karma-m-pa {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        text-align: center;
+        font-size: 18px !important;
+    }
+    .karma-card {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+    }
+    .karma-button-right {
+        right: 20% !important;
+    }
+    .karma-button-left {
+        left: 30% !important;
+    }
+    .karma-slide {
+        width: 100%;
+        margin-left: 5%;
+        align-items: center;
+    }
+    .karma-slide img{
+        width: auto;
+    }
+}
+
+
+@media only screen and (max-width: 762px) {
+
+    .slick-arrow-left {
+        position: absolute !important;
+        left: 22% !important;
+        top: 100% !important;
+    }
+    .slick-arrow-right {
+        position: absolute !important;
+        right: 22% !important;
+        top: 100% !important;
+    }
+    .karma-card {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+    }
+    .karma-button-right {
+        right: 20% !important;
+    }
+    .karma-button-left {
+        left: 30% !important;
+    }
+    .karma-slide {
+        width: 100%;
+        margin-left: 5%;
+        align-items: center;
+    }
+    .karma-slide img{
+        width: auto;
+    }
+}
+
+
+
 
 .karma-h img {
     width: 30px;
@@ -81,7 +182,7 @@
     .karma {
       padding:0px !important;
     }
-  }
+}
 
 .karma-crystal {
     background-image: url("../img/star/crystal.png");
@@ -216,7 +317,7 @@ a.opensea-small p {
 .karma-button-left {
     position:absolute;
     left: 43%;
-    top: 80%;
+    top: 100%;
     margin-right: 30px;
     background-image: url("../img/bg-shapes/icon-left.png");
     background-repeat: no-repeat;
@@ -229,7 +330,7 @@ a.opensea-small p {
 .karma-button-right {
     position:absolute;
     right: 43%;
-    top: 80%;
+    top: 100%;
     margin-right: 30px;
     background-image: url("../img/bg-shapes/icon-right.png");
     background-repeat: no-repeat;
@@ -241,3 +342,11 @@ a.opensea-small p {
 .karma-circle {
     background-color: #030303 !important;
 }
+.karma-box-out {
+    box-shadow: none;
+}
+.karma-slide img {
+    width: 100%;
+    width: 320px;
+}
+
