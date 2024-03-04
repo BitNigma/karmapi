@@ -28,13 +28,12 @@ func New() *APIserver {
 
 // Start new server
 func (s *APIserver) Start() error {
+
 	s.configureRouter()
-	go func() {
-		if err = http.ListenAndServe(":8080", s.router); err != nil {
-			log.Println("can't redirect user", err)
-		}
-		log.Println("starting server")
-	}()
+	if err = http.ListenAndServe(":8080", s.router); err != nil {
+		log.Println("can't redirect user", err)
+	}
+	log.Println("starting server")
 
 	return nil
 }
@@ -47,7 +46,6 @@ func (s *APIserver) configureRouter() {
 	router.HandleFunc("/404", s.misshandle())
 	router.HandleFunc("/", s.mainhandle())
 	router.PathPrefix("/").Handler(http.FileServer(http.Dir("static")))
-
 }
 
 func (s *APIserver) mainhandle() http.HandlerFunc {
@@ -55,11 +53,8 @@ func (s *APIserver) mainhandle() http.HandlerFunc {
 
 		data := s.config
 
-		basetpls := []string{"static/header.html", "static/footer.html", "static/head.html", "static/video.html", "static/second.html",
-			"static/third.html", "static/karma.html", "static/arcana.html", "static/market.html", "static/img.html", "static/roadmap.html",
-			"static/partners.html", "static/community.html", "static/bord.html"}
-		mass := []string{"static/index.html", basetpls[0], basetpls[1], basetpls[2], basetpls[3], basetpls[4],
-			basetpls[5], basetpls[6], basetpls[7], basetpls[8], basetpls[9], basetpls[10], basetpls[11], basetpls[12], basetpls[13]}
+		basetpls := []string{"static/header.html", "static/footer.html", "static/head.html", "static/section-1.html", "static/community.html", "static/section-1.html", "static/section-2.html", "static/section-3.html", "static/section-4.html", "static/section-5.html", "static/roadmap.html", "static/partners.html"}
+		mass := []string{"static/neoweb.html", basetpls[0], basetpls[1], basetpls[2], basetpls[3], basetpls[4], basetpls[5], basetpls[6], basetpls[7], basetpls[8], basetpls[9], basetpls[10], basetpls[11]}
 
 		//create html template
 		tmpl, err := template.ParseFiles(mass...)

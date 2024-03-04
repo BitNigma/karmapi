@@ -70,7 +70,7 @@ body {
     line-height: 1.6;
     color: #677788;
     text-align: left;
-    background-color: #030303;
+    background-color: #141718;
 }
 [tabindex="-1"]:focus:not(:focus-visible) {
     outline: 0 !important;
@@ -4438,7 +4438,7 @@ input[type="submit"].btn-block {
     }
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 0.5rem;
-        padding-left: 0.5rem;
+        padding-left: 1.75rem;
     }
     .navbar-expand-lg > .container,
     .navbar-expand-lg > .container-fluid,
@@ -4663,6 +4663,16 @@ input[type="submit"].btn-block {
 }
 .card-text:last-child {
     margin-bottom: 0;
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.7777777778;
+    letter-spacing: -0.054rem;
+    font-family: Inter, 'Source Sans Pro';
+    align-items: center;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .card-link:hover {
     text-decoration: none;
@@ -6388,7 +6398,7 @@ button.bg-light:hover {
     background-color: #c4daff !important;
 }
 .bg-dark {
-    background-color: #030303 !important;
+    background-color: #141718 !important;
 }
 a.bg-dark:focus,
 a.bg-dark:hover,
@@ -11944,7 +11954,7 @@ button:focus {
 }
 .navbar-brand,
 .navbar-brand > img {
-    width: 10.5rem;
+    width: 15.5rem;
 }
 .navbar-brand .graph > img {
 
@@ -11978,7 +11988,15 @@ button:focus {
     color: #FBC65F;
 }
 .header .nav-link {
-    color: #677788;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.7777777778;
+    letter-spacing: -0.054rem;
+    color: #fefefe;
+    font-family: Inter, 'Source Sans Pro';
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding-right: 20px;
 }
 
 .header .nav-link.active,
@@ -13005,7 +13023,7 @@ button:focus {
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
         padding-right: 0.75rem;
-        padding-left: 0.75rem;
+        padding-left: 1.75rem;
     }
     .navbar-expand-lg .navbar-nav .dropdown-menu {
         border-top: 0.1875rem solid #377dff;
@@ -13251,7 +13269,7 @@ button:focus {
     }
     .navbar-expand-lg .navbar-brand,
     .navbar-expand-lg .navbar-brand > img {
-        width: 7rem;
+        width: 12rem;
     }
     .navbar-expand-lg .navbar-nav {
         margin-top: 1rem;
@@ -20924,7 +20942,7 @@ a:hover .text-hover-primary {
   
 } 
 #home {
-background-color: #030303;
+background-color: #141718;
 }
 .no-padding {
     padding: 0px;
@@ -20937,4 +20955,15 @@ background-color: #030303;
 .karma-right {
     background-image:url("../img/bg-shapes/icon-right.png");
     background-repeat: no-repeat;
+}
+
+.new-karma-p {
+  margin-bottom: 2.4rem;
+  max-width: 70.9rem;
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.7142857143;
+  letter-spacing: -0.126rem;
+  color: #fefefe;
+  font-family: Inter, 'Source Sans Pro';
 }
