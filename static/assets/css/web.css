@@ -174,15 +174,12 @@
 }
 .content-Nsx .auto-group-ijbx-xza {
   box-sizing: border-box;
-  padding-top: 2.4rem;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 .content-Nsx .auto-group-ijbx-xza .group-1261153026-hxA {
   margin: 0rem 35.247rem 2.4rem 0rem;
-  width: calc(100% - 35.2467rem);
-  height: 9.6rem;
   display: flex;
   align-items: center;
   flex-shrink: 0;
@@ -240,9 +237,10 @@
   flex-shrink: 0;
 }
  .content-Nsx .auto-group-ijbx-xza .row-ND4 .button-primary-JcW {
-  width: 100%;
+  width: 180px;
+  height: 44px !important;
   height: 100%;
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.7777777778;
   letter-spacing: -0.054rem;
@@ -256,6 +254,10 @@
   background: linear-gradient(180deg, #fbc65f -0%, #ffb525 100%);
   border-radius: 5rem;
 }
+.content-Nsx .auto-group-ijbx-xza .row-ND4 .button-primary-JcW:hover {
+  color: #ffffff;
+}
+
  .group-1261153010-ZHY {
   width: 43.4935rem;
   height: 39.9186rem;
@@ -288,14 +290,9 @@
   left: 6.9rem;
   top: 0;
 }
- .auto-group-b5qa-GBx .frame-1261152908-uEv .group-1261153018-EHC {
+.group-1261153018-EHC {
   box-sizing: border-box;
   padding-bottom: 4.4rem;
-  width: 78.2rem;
-  height: 37.4rem;
-  position: absolute;
-  left: 0;
-  top: 14.75rem;
 }
  .auto-group-b5qa-GBx .frame-1261152908-uEv .group-1261153018-EHC .karma-protocol-leverages-sui-move-and-kart-for-enhanced-asset-support-and-growth-we-enable-the-community-to-initiate-prediction-events-and-utilize-smart-inscriptions-as-tools-for-engagement-foster-a-community-driven-ecosystem-growth-and-interaction-Jnr {
   margin-bottom: 1rem;
@@ -548,8 +545,8 @@
   flex-direction: column;
   flex-shrink: 0;
 }
- .hero-no-image-QVk .content-6tN .kartscription-DTC {
-  font-size: 4.8rem;
+ .kartscription-DTC {
+  font-size: 48px;
   font-weight: 700;
   line-height: 1.1666666667;
   letter-spacing: -0.144rem;
@@ -557,6 +554,33 @@
   font-family: Inter, 'Source Sans Pro';
   white-space: nowrap;
   flex-shrink: 0;
+}
+.karma-text-gray {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2631578947;
+    letter-spacing: -0.019rem;
+    color: #6c7274;
+    font-family: Karla, 'Source Sans Pro';
+    flex-shrink: 0;
+}
+.new_button {
+  display: block;
+  border: 1px solid #aaaaaa;
+  border-radius: 25px;
+  width: 180px;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.7777777778;
+  letter-spacing: -0.054rem;
+  color: #fefefe;
+  font-family: Inter, 'Source Sans Pro';
+}
+
+.new_button:hover {
+  color: #FBC65F;
 }
  .hero-no-image-QVk .content-6tN .karma-protocol-is-ready-to-introduce-the-first-major-asset-kartscription-this-innovative-asset-on-the-sui-blockchain-presents-a-unique-blend-of-nfts-coins-predictive-tools-and-gaming-elements-through-a-new-concept-known-as-a-bidirectional-graph-token-this-makes-kartscription-a-game-changer-in-how-we-interact-with-digital-assets-LGv {
   max-width: 61.6rem;
@@ -581,22 +605,8 @@
   overflow: hidden;
   position: relative;
 }
- .hero-no-image-QVk .content-6tN .row-7BC .row-fCi .button-secondary-Dzv {
-  width: 100%;
-  height: 100%;
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.7777777778;
-  letter-spacing: -0.054rem;
-  color: #fefefe;
-  font-family: Inter, 'Source Sans Pro';
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: solid 0.1rem #fefefe;
-  box-sizing: border-box;
-  border-radius: 5rem;
+.button-secondary-Dzv {
+  margin-top: 30px;
 }
  .hero-no-image-QVk .auto-group-u1ka-pjp {
   width: 69.4rem;
@@ -1770,7 +1780,7 @@
   flex-direction: column;
   flex-shrink: 0;
 }
- .auto-group-u5pc-Hpz .group-1261153009-u4i .item-8-TM8 .auto-group-8upx-PVg {
+.auto-group-8upx-PVg {
   box-sizing: border-box;
   padding: 0rem 16.95rem 6.8rem 17.15rem;
   width: 100%;
@@ -2149,9 +2159,8 @@
   flex-direction: column;
   flex-shrink: 0;
 }
- .auto-group-u5pc-Hpz .group-1261153009-u4i .item-9-Emk .auto-group-fc1c-Pee {
+.auto-group-fc1c-Pee {
   margin-bottom: 4.1rem;
-  width: 139rem;
   height: 8.1rem;
   position: relative;
   object-fit: contain;
@@ -2170,4 +2179,19 @@
   font-family: Inter, 'Source Sans Pro';
   white-space: nowrap;
   flex-shrink: 0;
+}
+.karma-protocol {
+    margin-bottom: 1rem;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 2;
+    letter-spacing: -0.06rem;
+    color: #fefefe;
+    font-family: Inter, 'Source Sans Pro';
+}
+
+@media (min-width: 576px) {
+  .jumbotron {
+      padding: 4rem 2rem;
+  }
 }

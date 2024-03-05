@@ -23,19 +23,30 @@
     border-radius: 10px;
 }
 .karma-h{
-    font-family: Canela Trial !important;
     font-size: 28px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: #FBC65F;
+    font-weight: 500;
+    line-height: 1.2000000293;
+    color: #fefffc;
+    font-family: Inter, 'Source Sans Pro';
 
 }
+.neo-karma {
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.2000000293;
+    color: #fefffc;
+    font-family: Inter, 'Source Sans Pro';
+}
 .karma-h-b{
-    font-family: Canela Trial !important;
-    font-size: 48px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: #FBC65F;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2000000363;
+    text-transform: capitalize;
+    color: #fefffc;
+    font-family: Inter, 'Source Sans Pro';
+    white-space: nowrap;
 }
 @media only screen and (max-width: 375px) {
     .karma-h-b {
@@ -293,15 +304,22 @@ a.opensea-small p {
     padding-left: 15px;
     font-family: Canela Trial !important;
     font-size: 18px;
-    border-top: 1px solid #FBC65F;
 } 
 .star li{
     padding-left: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5555555556;
+    color: #aaaaaa;
+    font-family: Inter, 'Source Sans Pro';
+    flex-shrink: 0;
 }
 .karma-yl {
     color: #E1C05E;
-    font-size: 26px;
-    font-family: Canela Trial !important;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2000000293;
+    font-family: Inter, 'Source Sans Pro';
 }
 .bg-karma {
     background: 0px 50px no-repeat url("../img/bg-shapes/bg4.png") !important;
@@ -366,4 +384,13 @@ a.opensea-small p {
     width: 100%;
     width: 320px;
 }
+.img-background-1 {
+    background: 0px 0px no-repeat url("../img/all/background_1.png");
+}
+.border-roadmap {
+    background: no-repeat 0px 22px url("../img/all/frame-34084.png");
+    background-size: 140px;
+    height: 50px;
+}
+
 
