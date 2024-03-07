@@ -20990,13 +20990,38 @@ background-color: #141718;
     background-position: bottom;
     text-align: center;
 }
-
+.section-img {
+    width: 80%;
+}
 @media (max-width: 576px) {
     .section-3-bg {
         background-size: cover;
     }
     .section-3-bg img{
         margin-top: 20px;
+    }
+    .karma-circle {
+        background: #151718 !important;
+    }
+    .header {
+        border-bottom: 1px solid #404040;
+    }
+    .kartscription-DTC {
+        white-space: normal !important;
+        font-size: 38px !important;
+    }
+    .karma-protocol {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .neo-karma {
+        font-size: 28px !important;
+    }
+    .neo-karma-h {
+        font-size: 22px !important;
+    }
+    .section-img {
+        width: 100% !important;
     }
 }
 

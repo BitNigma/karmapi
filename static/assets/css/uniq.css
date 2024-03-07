@@ -37,6 +37,13 @@
     color: #fefffc;
     font-family: Inter, 'Source Sans Pro';
 }
+.neo-karma-h {
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.2000000293;
+    color: #fefffc;
+    font-family: Inter, 'Source Sans Pro'
+}
 .karma-h-b{
     align-items: center;
     justify-content: center;
