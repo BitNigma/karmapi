@@ -45,6 +45,7 @@ func (s *APIserver) configureRouter() {
 	})
 	router.HandleFunc("/404", s.misshandle())
 	router.HandleFunc("/", s.mainhandle())
+	router.HandleFunc("/about", s.about())
 	router.PathPrefix("/").Handler(http.FileServer(http.Dir("static")))
 }
 
@@ -55,6 +56,30 @@ func (s *APIserver) mainhandle() http.HandlerFunc {
 
 		basetpls := []string{"static/header.html", "static/footer.html", "static/head.html", "static/section-1.html", "static/community.html", "static/section-1.html", "static/section-2.html", "static/section-3.html", "static/section-4.html", "static/section-5.html", "static/roadmap.html", "static/partners.html"}
 		mass := []string{"static/neoweb.html", basetpls[0], basetpls[1], basetpls[2], basetpls[3], basetpls[4], basetpls[5], basetpls[6], basetpls[7], basetpls[8], basetpls[9], basetpls[10], basetpls[11]}
+
+		//create html template
+		tmpl, err := template.ParseFiles(mass...)
+		if err != nil {
+			http.Error(w, err.Error(), 400)
+			return
+		}
+
+		err = tmpl.Execute(w, &data)
+		if err != nil {
+			http.Error(w, err.Error(), 400)
+			return
+		}
+	}
+}
+
+func (s *APIserver) about() http.HandlerFunc {
+
+	return func(w http.ResponseWriter, r *http.Request) {
+
+		data := s.config
+
+		basetpls := []string{"static/header.html", "static/footer.html", "static/head.html", "static/section-6.html", "static/section-7.html", "static/section-8.html", "static/section-9.html"}
+		mass := []string{"static/about.html", basetpls[0], basetpls[1], basetpls[2], basetpls[3], basetpls[4], basetpls[5], basetpls[6]}
 
 		//create html template
 		tmpl, err := template.ParseFiles(mass...)

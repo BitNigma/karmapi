@@ -20989,9 +20989,13 @@ background-color: #141718;
     background-size: contain;
     background-position: bottom;
     text-align: center;
+    min-height: 400px;
 }
 .section-img {
     width: 80%;
+}
+.section-about {
+    text-align: center;
 }
 @media (max-width: 576px) {
     .section-3-bg {
