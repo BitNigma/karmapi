@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+
+  <title>
+{{.Title}}
+  </title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <link rel="manifest" href="./assets/site.webmanifest">
+  <link rel="mask-icon" href="./assets/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="keywords" content="{{.Keywords}}" />
+  <meta name="description" content="{{.Desc}}" />
+  {{template "links"}}
+</head>
+
+
+<body>
+  {{template "header"}}
+  <! ---- main ----- >
+<main id="home" role="main">
+  
+
+  {{template "karma"}}
+  {{template "bord"}}
+  {{template "arcana"}}
+  {{template "market"}}
+ 
+</main>
+
+{{template "footer"}}
+
+  <!-- Go to Top -->
+  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
+     data-hs-go-to-options='{
+       "offsetTop": 700,
+       "position": {
+         "init": {
+           "right": 15
+         },
+         "show": {
+           "bottom": 15
+         },
+         "hide": {
+           "bottom": -15
+         }
+       }
+     }'>
+    <i class="fas fa-angle-up"></i>
+  </a>
+  <!-- End Go to Top -->
+ <!-- JS Global Compulsory  -->
+  <script src="./assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+  <script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="./assets/vendor/hs-header/dist/hs-header.min.js"></script>
+  <script src="./assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+  <script src="./assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+
+
+  <script src="./assets/vendor/hs-scroll-nav/dist/hs-scroll-nav.min.js"></script>
+  <script src="./assets/vendor/slick-carousel/slick/slick.js"></script>
+
+  <!-- JS Front -->
+  <script src="./assets/js/theme.min.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // INITIALIZATION OF HEADER
+      // =======================================================
+      var header = new HSHeader($('#header')).init();
+
+
+      // INITIALIZATION OF MEGA MENU
+      // =======================================================
+      var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+        desktop: {
+          position: 'left'
+        }
+      }).init();
+
+
+      // INITIALIZATION OF SLICK CAROUSEL
+      // =======================================================
+      $('.js-slick-carousel').each(function() {
+        var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
+      });
+
+      // INITIALIZATION OF TEXT ANIMATION (TYPING)
+      // =======================================================
+      var typed = $.HSCore.components.HSTyped.init(".js-text-animation");
+
+      // INITIALIZATION OF FANCYBOX
+      // =======================================================
+      $('.js-fancybox').each(function () {
+        var fancybox = $.HSCore.components.HSFancyBox.init($(this));
+      });
+
+ 
+
+      // INITIALIZATION OF GO TO
+      // =======================================================
+      $('.js-go-to').each(function () {
+        var goTo = new HSGoTo($(this)).init();
+      });
+    });
+
+    
+
+      // INITIALIZATION OF SCROLL NAV
+      // =======================================================
+      var isClosed = false;
+
+      $('.js-scroll-nav').each(function () {
+        var scrollNav = new HSScrollNav($(this), {
+          beforeShow: function () {
+            if (window.innerWidth < 768) {
+              $('#navBar').collapse('hide').on('hidden.bs.collapse', function () {
+                isClosed = true;
+              });
+            } else {
+              isClosed = true;
+            }
+
+            return isClosed;
+          },
+          afterShow: function () {
+            isClosed = false;
+          }
+        }).init();
+      });
+    
+  </script>
+  <!-- IE Support -->
+  <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="./assets/vendor/babel-polyfill/dist/polyfill.js"><\/script>');
+  </script>
+</body>
+</html>

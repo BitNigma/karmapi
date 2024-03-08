@@ -11,9 +11,11 @@
 }
 
 #karmapi-p {
-    font-family: Spectral !important;
+    font-family: 'Inter', 'Source Sans Pro';
+    font-weight: 400;
+    line-height: 32px;
     color: #A6A695;
-    font-size: 14pt;
+    font-size: 20px;
 
 }
 
@@ -53,7 +55,6 @@
     text-transform: capitalize;
     color: #fefffc;
     font-family: Inter, 'Source Sans Pro';
-    white-space: nowrap;
 }
 @media only screen and (max-width: 375px) {
     .karma-h-b {
@@ -169,6 +170,11 @@
         width: auto !important;
         margin-left: auto;
     }
+    .mob-uniq {
+        width: 100% !important;
+        margin-top: 80px !important;
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -178,7 +184,10 @@
     width: 30px;
 }
 .karma-y {
-    font-family: Spectral !important;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2000000293;
+    font-family: Inter, 'Source Sans Pro';
     color: #FBC65F;
 }
 
@@ -237,30 +246,69 @@
 
 a.opensea {
     display: inline-block;
-    background: linear-gradient(45deg, rgba(255, 211, 77, 0.6), black);
+    background: #FBC65F;
     border-radius: 40px;
     border: 1px solid #FBC65F;
     text-align: center;
-    color: rgba(255, 211, 77, 0.6);
+    color: #030303;
     vertical-align: bottom;
     padding-left: 20px;
     padding-right: 20px;
+    display: block;
+    width: 300px;
 }
-    
-a.opensea:hover {
-    box-shadow: inset 1px 0px 3px 1px #FBC65F;
+a.opensea-right {
+    background: none;
+    border-radius: 40px;
+    border: 1px solid #FBC65F;
+    text-align: center;
+    color: #030303;
+    vertical-align: bottom;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+    width: 300px;
+}
+
+a.opensea-right:hover {
+    background: #FBC65F;
+}
+
+a.opensea-right:hover p {
+    color: #030303;
+}
+
+
+a.opensea:hover p {
+    color: #fff;
 }
 
 a.opensea p {
     vertical-align: middle;
-    font-family: Spectral !important;
+    font-family: Inter, 'Source Sans Pro';
+    color: #030303;
+    height: auto;
+    width: auto;
+    font-size: 24px;
+    padding-top: 20px;
+    font-weight: 400;
+}
+
+a.opensea-right p {
+    vertical-align: middle;
+    font-family: Inter, 'Source Sans Pro';
     color: #fff;
     height: auto;
     width: auto;
     font-size: 24px;
     padding-top: 20px;
-    font-weight: 700;
+    font-weight: 400;
 }
+
+.gap-3 {
+    gap: 2rem !important;
+}
+
 
 
 a.opensea-small {

@@ -46,6 +46,10 @@ func (s *APIserver) configureRouter() {
 	router.HandleFunc("/404", s.misshandle())
 	router.HandleFunc("/", s.mainhandle())
 	router.HandleFunc("/about", s.about())
+	router.HandleFunc("/kartscription", s.kartscript())
+	router.HandleFunc("/prediction", s.prediction())
+	router.HandleFunc("/nfts", s.nft())
+	router.HandleFunc("/kart", s.kart())
 	router.PathPrefix("/").Handler(http.FileServer(http.Dir("static")))
 }
 
@@ -80,6 +84,102 @@ func (s *APIserver) about() http.HandlerFunc {
 
 		basetpls := []string{"static/header.html", "static/footer.html", "static/head.html", "static/section-6.html", "static/section-7.html", "static/section-8.html", "static/section-9.html"}
 		mass := []string{"static/about.html", basetpls[0], basetpls[1], basetpls[2], basetpls[3], basetpls[4], basetpls[5], basetpls[6]}
+
+		//create html template
+		tmpl, err := template.ParseFiles(mass...)
+		if err != nil {
+			http.Error(w, err.Error(), 400)
+			return
+		}
+
+		err = tmpl.Execute(w, &data)
+		if err != nil {
+			http.Error(w, err.Error(), 400)
+			return
+		}
+	}
+}
+
+func (s *APIserver) kartscript() http.HandlerFunc {
+
+	return func(w http.ResponseWriter, r *http.Request) {
+
+		data := s.config
+
+		basetpls := []string{"static/header.html", "static/footer.html", "static/head.html", "static/section-10.html", "static/section-11.html", "static/section-12.html"}
+		mass := []string{"static/kartscription.html", basetpls[0], basetpls[1], basetpls[2], basetpls[3], basetpls[4], basetpls[5]}
+
+		//create html template
+		tmpl, err := template.ParseFiles(mass...)
+		if err != nil {
+			http.Error(w, err.Error(), 400)
+			return
+		}
+
+		err = tmpl.Execute(w, &data)
+		if err != nil {
+			http.Error(w, err.Error(), 400)
+			return
+		}
+	}
+}
+
+func (s *APIserver) prediction() http.HandlerFunc {
+
+	return func(w http.ResponseWriter, r *http.Request) {
+
+		data := s.config
+
+		basetpls := []string{"static/header.html", "static/footer.html", "static/head.html", "static/section-13.html", "static/section-14.html"}
+		mass := []string{"static/prediction.html", basetpls[0], basetpls[1], basetpls[2], basetpls[3], basetpls[4]}
+
+		//create html template
+		tmpl, err := template.ParseFiles(mass...)
+		if err != nil {
+			http.Error(w, err.Error(), 400)
+			return
+		}
+
+		err = tmpl.Execute(w, &data)
+		if err != nil {
+			http.Error(w, err.Error(), 400)
+			return
+		}
+	}
+}
+
+func (s *APIserver) nft() http.HandlerFunc {
+
+	return func(w http.ResponseWriter, r *http.Request) {
+
+		data := s.config
+
+		basetpls := []string{"static/header.html", "static/footer.html", "static/head.html", "static/arcana.html", "static/bord.html", "static/karma.html", "static/market.html"}
+		mass := []string{"static/nfts.html", basetpls[0], basetpls[1], basetpls[2], basetpls[3], basetpls[4], basetpls[5], basetpls[6]}
+
+		//create html template
+		tmpl, err := template.ParseFiles(mass...)
+		if err != nil {
+			http.Error(w, err.Error(), 400)
+			return
+		}
+
+		err = tmpl.Execute(w, &data)
+		if err != nil {
+			http.Error(w, err.Error(), 400)
+			return
+		}
+	}
+}
+
+func (s *APIserver) kart() http.HandlerFunc {
+
+	return func(w http.ResponseWriter, r *http.Request) {
+
+		data := s.config
+
+		basetpls := []string{"static/header.html", "static/footer.html", "static/head.html", "static/section-15.html"}
+		mass := []string{"static/kart.html", basetpls[0], basetpls[1], basetpls[2], basetpls[3]}
 
 		//create html template
 		tmpl, err := template.ParseFiles(mass...)
